@@ -1,5 +1,5 @@
 //
-//  UIKitStylesTests.swift
+//  LayerStyle.swift
 //  UIKitStylesTests
 //
 //  Created by Terrick Mansur on 5/21/19.
@@ -9,10 +9,10 @@
 import XCTest
 @testable import UIKitStyles
 
-class UIKitStylesTests: XCTestCase {
-
+class LayerStyleTest: XCTestCase {
+    
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+
     }
 
     override func tearDown() {

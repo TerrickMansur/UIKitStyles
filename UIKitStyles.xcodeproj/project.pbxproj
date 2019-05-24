@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CB6C83452294770100A81542 /* UIKitStyles.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB6C833B2294770100A81542 /* UIKitStyles.framework */; };
-		CB6C834A2294770100A81542 /* UIKitStylesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6C83492294770100A81542 /* UIKitStylesTests.swift */; };
+		CB6C834A2294770100A81542 /* CALayerStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6C83492294770100A81542 /* CALayerStyle.swift */; };
 		CB6C834C2294770100A81542 /* UIKitStyles.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6C833E2294770100A81542 /* UIKitStyles.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CB6C8375229484CA00A81542 /* LayerStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6C8374229484CA00A81542 /* LayerStyle.swift */; };
 		CB6C8377229519C700A81542 /* ViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6C8376229519C700A81542 /* ViewStyle.swift */; };
@@ -29,7 +29,7 @@
 		CB6C833E2294770100A81542 /* UIKitStyles.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIKitStyles.h; sourceTree = "<group>"; };
 		CB6C833F2294770100A81542 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB6C83442294770100A81542 /* UIKitStylesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIKitStylesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB6C83492294770100A81542 /* UIKitStylesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitStylesTests.swift; sourceTree = "<group>"; };
+		CB6C83492294770100A81542 /* CALayerStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayerStyle.swift; sourceTree = "<group>"; };
 		CB6C834B2294770100A81542 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB6C8374229484CA00A81542 /* LayerStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayerStyle.swift; sourceTree = "<group>"; };
 		CB6C8376229519C700A81542 /* ViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStyle.swift; sourceTree = "<group>"; };
@@ -85,7 +85,7 @@
 		CB6C83482294770100A81542 /* UIKitStylesTests */ = {
 			isa = PBXGroup;
 			children = (
-				CB6C83492294770100A81542 /* UIKitStylesTests.swift */,
+				CB6C83492294770100A81542 /* CALayerStyle.swift */,
 				CB6C834B2294770100A81542 /* Info.plist */,
 			);
 			path = UIKitStylesTests;
@@ -218,7 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB6C834A2294770100A81542 /* UIKitStylesTests.swift in Sources */,
+				CB6C834A2294770100A81542 /* CALayerStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
