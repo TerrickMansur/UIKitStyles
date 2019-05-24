@@ -63,8 +63,6 @@ class LabelStyle: NSObject {
 extension UILabel {
     
     func apply(style: LabelStyle) {
-
-
         if let attributedText = style.attributedText { self.attributedText = attributedText}
         if let font = style.font { self.font = font}
         if let textColor = style.textColor { self.textColor = textColor}
@@ -80,17 +78,6 @@ extension UILabel {
         if let isHighlighted = style.isHighlighted { self.isHighlighted = isHighlighted}
         if let shadowColor = style.shadowColor { self.shadowColor = shadowColor}
         if let shadowOffset = style.shadowOffset { self.shadowOffset = shadowOffset}
-
-
-
-
-
-
-
-
-
-
-
     }
 }
 
