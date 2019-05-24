@@ -12,6 +12,7 @@
 		CB6C834C2294770100A81542 /* UIKitStyles.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6C833E2294770100A81542 /* UIKitStyles.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CB6C8375229484CA00A81542 /* LayerStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6C8374229484CA00A81542 /* LayerStyle.swift */; };
 		CB6C8377229519C700A81542 /* ViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6C8376229519C700A81542 /* ViewStyle.swift */; };
+		CB6C837922979F5500A81542 /* LabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6C837822979F5500A81542 /* LabelStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +34,7 @@
 		CB6C834B2294770100A81542 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB6C8374229484CA00A81542 /* LayerStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayerStyle.swift; sourceTree = "<group>"; };
 		CB6C8376229519C700A81542 /* ViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStyle.swift; sourceTree = "<group>"; };
+		CB6C837822979F5500A81542 /* LabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				CB6C8374229484CA00A81542 /* LayerStyle.swift */,
 				CB6C8376229519C700A81542 /* ViewStyle.swift */,
+				CB6C837822979F5500A81542 /* LabelStyle.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB6C8377229519C700A81542 /* ViewStyle.swift in Sources */,
+				CB6C837922979F5500A81542 /* LabelStyle.swift in Sources */,
 				CB6C8375229484CA00A81542 /* LayerStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

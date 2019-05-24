@@ -19,7 +19,7 @@ class ViewStyle: NSObject {
     var clipsToBounds: Bool? = nil
     var clearsContextBeforeDrawing: Bool? = nil
     var mask: UIView? = nil
-    var layer: CALayerStyle = CALayerStyle()
+    var layer: LayerStyle = LayerStyle()
     
     init(
         backgroundColor: UIColor? = nil,
@@ -46,8 +46,8 @@ class ViewStyle: NSObject {
 
 extension UIView {
     
-    func applyStyle(style: ViewStyle) {
-        self.layer.applyStyle(style: style.layer)
+    func apply(style: ViewStyle) {
+        self.layer.apply(style: style.layer)
         if let backgroundColor = style.backgroundColor { self.backgroundColor = backgroundColor}
         if let isHidden = style.isHidden { self.isHidden = isHidden}
         if let alpha = style.alpha { self.alpha = alpha}

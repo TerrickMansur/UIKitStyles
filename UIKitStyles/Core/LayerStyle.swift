@@ -10,7 +10,7 @@ import UIKit
 import CoreGraphics
 import QuartzCore
 
-public class CALayerStyle {
+public class LayerStyle {
     public var contentsGravity: CALayerContentsGravity?
     public var opacity: Float?
     public var isHidden: Bool?
@@ -74,7 +74,7 @@ public class CALayerStyle {
 
 extension CALayer {
     
-    func applyStyle(style: CALayerStyle) {
+    func apply(style: LayerStyle) {
         if let contentsGravity = style.contentsGravity { self.contentsGravity = contentsGravity }
         if let opacity = style.opacity { self.opacity = opacity }
         if let isHidden = style.isHidden { self.isHidden = isHidden }
