@@ -13,6 +13,8 @@
 		CB6C8375229484CA00A81542 /* LayerStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6C8374229484CA00A81542 /* LayerStyle.swift */; };
 		CB6C8377229519C700A81542 /* ViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6C8376229519C700A81542 /* ViewStyle.swift */; };
 		CB6C837922979F5500A81542 /* LabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6C837822979F5500A81542 /* LabelStyle.swift */; };
+		CB6C837B2297B5F200A81542 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6C837A2297B5F200A81542 /* ButtonStyle.swift */; };
+		CB6C837D2297C21700A81542 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6C837C2297C21700A81542 /* Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,8 @@
 		CB6C8374229484CA00A81542 /* LayerStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayerStyle.swift; sourceTree = "<group>"; };
 		CB6C8376229519C700A81542 /* ViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStyle.swift; sourceTree = "<group>"; };
 		CB6C837822979F5500A81542 /* LabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelStyle.swift; sourceTree = "<group>"; };
+		CB6C837A2297B5F200A81542 /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
+		CB6C837C2297C21700A81542 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,7 @@
 				CB6C8373229484AD00A81542 /* Core */,
 				CB6C833E2294770100A81542 /* UIKitStyles.h */,
 				CB6C833F2294770100A81542 /* Info.plist */,
+				CB6C837C2297C21700A81542 /* Utilities.swift */,
 			);
 			path = UIKitStyles;
 			sourceTree = "<group>";
@@ -99,6 +104,7 @@
 				CB6C8374229484CA00A81542 /* LayerStyle.swift */,
 				CB6C8376229519C700A81542 /* ViewStyle.swift */,
 				CB6C837822979F5500A81542 /* LabelStyle.swift */,
+				CB6C837A2297B5F200A81542 /* ButtonStyle.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -213,7 +219,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB6C8377229519C700A81542 /* ViewStyle.swift in Sources */,
+				CB6C837B2297B5F200A81542 /* ButtonStyle.swift in Sources */,
 				CB6C837922979F5500A81542 /* LabelStyle.swift in Sources */,
+				CB6C837D2297C21700A81542 /* Utilities.swift in Sources */,
 				CB6C8375229484CA00A81542 /* LayerStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

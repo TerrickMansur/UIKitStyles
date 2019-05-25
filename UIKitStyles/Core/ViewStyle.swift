@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewStyle: NSObject {
+class ViewStyle {
 
     var backgroundColor: UIColor? = nil
     var isHidden: Bool? = nil
