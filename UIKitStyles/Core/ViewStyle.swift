@@ -48,14 +48,14 @@ extension UIView {
     
     func apply(style: ViewStyle) {
         self.layer.apply(style: style.layer)
-        if let backgroundColor = style.backgroundColor { self.backgroundColor = backgroundColor}
-        if let isHidden = style.isHidden { self.isHidden = isHidden}
-        if let alpha = style.alpha { self.alpha = alpha}
-        if let isOpaque = style.isOpaque { self.isOpaque = isOpaque}
-        if let tintColor = style.tintColor { self.tintColor = tintColor}
-        if let tintAdjustmentMode = style.tintAdjustmentMode { self.tintAdjustmentMode = tintAdjustmentMode}
-        if let clipsToBounds = style.clipsToBounds { self.clipsToBounds = clipsToBounds}
-        if let clearsContextBeforeDrawing = style.clearsContextBeforeDrawing { self.clearsContextBeforeDrawing = clearsContextBeforeDrawing}
-        if let mask = style.mask { self.mask = mask}
+        style.backgroundColor.whenNotNil { self.backgroundColor = $0 }
+        style.isHidden.whenNotNil { self.isHidden = $0 }
+        style.alpha.whenNotNil { self.alpha = $0 }
+        style.isOpaque.whenNotNil { self.isOpaque = $0 }
+        style.tintColor.whenNotNil { self.tintColor = $0 }
+        style.tintAdjustmentMode.whenNotNil { self.tintAdjustmentMode = $0 }
+        style.clipsToBounds.whenNotNil { self.clipsToBounds = $0 }
+        style.clearsContextBeforeDrawing.whenNotNil { self.clearsContextBeforeDrawing = $0 }
+        style.mask.whenNotNil { self.mask = $0 }
     }
 }

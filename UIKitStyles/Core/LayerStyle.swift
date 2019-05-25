@@ -27,7 +27,6 @@ public class LayerStyle {
     public var shadowOffset: CGSize?
     public var shadowColor: CGColor?
     public var shadowPath: CGPath?
-    public var style: [AnyHashable : Any]?
     public var allowsEdgeAntialiasing: Bool?
     public var allowsGroupOpacity: Bool?
 
@@ -47,7 +46,6 @@ public class LayerStyle {
          shadowOffset: CGSize? = nil,
          shadowColor: CGColor? = nil,
          shadowPath: CGPath? = nil,
-         style: [AnyHashable : Any]? = nil,
          allowsEdgeAntialiasing: Bool? = nil,
          allowsGroupOpacity: Bool? = nil) {
          self.contentsGravity = contentsGravity
@@ -66,7 +64,6 @@ public class LayerStyle {
          self.shadowOffset = shadowOffset
          self.shadowColor = shadowColor
          self.shadowPath = shadowPath
-         self.style = style
          self.allowsEdgeAntialiasing = allowsEdgeAntialiasing
          self.allowsGroupOpacity = allowsGroupOpacity
     }
@@ -75,24 +72,25 @@ public class LayerStyle {
 extension CALayer {
     
     func apply(style: LayerStyle) {
-        if let contentsGravity = style.contentsGravity { self.contentsGravity = contentsGravity }
-        if let opacity = style.opacity { self.opacity = opacity }
-        if let isHidden = style.isHidden { self.isHidden = isHidden }
-        if let masksToBounds = style.masksToBounds { self.masksToBounds = masksToBounds }
-        if let mask = style.mask { self.mask = mask }
-        if let isDoubleSided = style.isDoubleSided { self.isDoubleSided = isDoubleSided }
-        if let cornerRadius = style.cornerRadius { self.cornerRadius = cornerRadius }
-        if let maskedCorners = style.maskedCorners { self.maskedCorners = maskedCorners }
-        if let borderWidth = style.borderWidth { self.borderWidth = borderWidth }
-        if let borderColor = style.borderColor { self.borderColor = borderColor }
-        if let backgroundColor = style.backgroundColor { self.backgroundColor = backgroundColor }
-        if let shadowOpacity = style.shadowOpacity { self.shadowOpacity = shadowOpacity }
-        if let shadowRadius = style.shadowRadius { self.shadowRadius = shadowRadius }
-        if let shadowOffset = style.shadowOffset { self.shadowOffset = shadowOffset }
-        if let shadowColor = style.shadowColor { self.shadowColor = shadowColor }
-        if let shadowPath = style.shadowPath { self.shadowPath = shadowPath }
-        if let style = style.style { self.style = style }
-        if let allowsEdgeAntialiasing = style.allowsEdgeAntialiasing { self.allowsEdgeAntialiasing = allowsEdgeAntialiasing }
-        if let allowsGroupOpacity = style.allowsGroupOpacity { self.allowsGroupOpacity = allowsGroupOpacity }
+
+        style.contentsGravity.whenNotNil { self.contentsGravity = $0 }
+        style.opacity.whenNotNil { self.opacity = $0 }
+        style.isHidden.whenNotNil { self.isHidden = $0 }
+        style.masksToBounds.whenNotNil { self.masksToBounds = $0 }
+        style.mask.whenNotNil { self.mask = $0 }
+        style.isDoubleSided.whenNotNil { self.isDoubleSided = $0 }
+        style.cornerRadius.whenNotNil { self.cornerRadius = $0 }
+        style.maskedCorners.whenNotNil { self.maskedCorners = $0 }
+        style.borderWidth.whenNotNil { self.borderWidth = $0 }
+        style.borderColor.whenNotNil { self.borderColor = $0 }
+        style.backgroundColor.whenNotNil { self.backgroundColor = $0 }
+        style.shadowOpacity.whenNotNil { self.shadowOpacity = $0 }
+        style.shadowRadius.whenNotNil { self.shadowRadius = $0 }
+        style.shadowOffset.whenNotNil { self.shadowOffset = $0 }
+        style.shadowColor.whenNotNil { self.shadowColor = $0 }
+        style.shadowPath.whenNotNil { self.shadowPath = $0 }
+        style.allowsGroupOpacity.whenNotNil { self.allowsGroupOpacity = $0 }
+        style.allowsEdgeAntialiasing.whenNotNil { self.allowsEdgeAntialiasing = $0 }
+        style.allowsGroupOpacity.whenNotNil { self.allowsGroupOpacity = $0 }
    }
 }

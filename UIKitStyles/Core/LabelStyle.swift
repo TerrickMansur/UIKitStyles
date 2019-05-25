@@ -65,21 +65,21 @@ extension UILabel {
     
     func apply(style: LabelStyle) {
         super.apply(style: style)
-        if let attributedText = style.attributedText { self.attributedText = attributedText}
-        if let font = style.font { self.font = font}
-        if let textColor = style.textColor { self.textColor = textColor}
-        if let textAlignment = style.textAlignment { self.textAlignment = textAlignment}
-        if let lineBreakMode = style.lineBreakMode { self.lineBreakMode = lineBreakMode}
-        if let isEnabled = style.isEnabled { self.isEnabled = isEnabled}
-        if let adjustsFontSizeToFitWidth = style.adjustsFontSizeToFitWidth { self.adjustsFontSizeToFitWidth = adjustsFontSizeToFitWidth}
-        if let allowsDefaultTighteningForTruncation = style.allowsDefaultTighteningForTruncation { self.allowsDefaultTighteningForTruncation = allowsDefaultTighteningForTruncation}
-        if let baselineAdjustment = style.baselineAdjustment { self.baselineAdjustment = baselineAdjustment}
-        if let minimumScaleFactor = style.minimumScaleFactor { self.minimumScaleFactor = minimumScaleFactor}
-        if let numberOfLines = style.numberOfLines { self.numberOfLines = numberOfLines}
-        if let highlightedTextColor = style.highlightedTextColor { self.highlightedTextColor = highlightedTextColor}
-        if let isHighlighted = style.isHighlighted { self.isHighlighted = isHighlighted}
-        if let shadowColor = style.shadowColor { self.shadowColor = shadowColor}
-        if let shadowOffset = style.shadowOffset { self.shadowOffset = shadowOffset}
+        style.attributedText.whenNotNil { self.attributedText = $0}
+        style.font.whenNotNil { self.font = $0}
+        style.textColor.whenNotNil { self.textColor = $0}
+        style.textAlignment.whenNotNil { self.textAlignment = $0}
+        style.lineBreakMode.whenNotNil { self.lineBreakMode = $0}
+        style.isEnabled.whenNotNil { self.isEnabled = $0}
+        style.adjustsFontSizeToFitWidth.whenNotNil { self.adjustsFontSizeToFitWidth = $0}
+        style.allowsDefaultTighteningForTruncation.whenNotNil { self.allowsDefaultTighteningForTruncation = $0}
+        style.baselineAdjustment.whenNotNil { self.baselineAdjustment = $0}
+        style.minimumScaleFactor.whenNotNil { self.minimumScaleFactor = $0}
+        style.numberOfLines.whenNotNil { self.numberOfLines = $0}
+        style.highlightedTextColor.whenNotNil { self.highlightedTextColor = $0}
+        style.isHighlighted.whenNotNil { self.isHighlighted = $0}
+        style.shadowColor.whenNotNil { self.shadowColor = $0}
+        style.shadowOffset.whenNotNil { self.shadowOffset = $0}
     }
 }
 

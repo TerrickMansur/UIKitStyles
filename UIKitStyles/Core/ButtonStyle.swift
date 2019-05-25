@@ -64,14 +64,14 @@ extension UIButton {
         style.attributedTitle.forEach { item in setAttributedTitle(item.value, for: item.key) }
         style.titleColor.forEach { item in setTitleColor(item.value, for: item.key) }
         style.titleShadowColor.forEach { item in setTitleShadowColor(item.value, for: item.key) }
-        if let reversesTitleShadowWhenHighlighted = style.reversesTitleShadowWhenHighlighted { self.reversesTitleShadowWhenHighlighted = reversesTitleShadowWhenHighlighted}
-        if let adjustsImageWhenHighlighted = style.adjustsImageWhenHighlighted { self.adjustsImageWhenHighlighted = adjustsImageWhenHighlighted}
-        if let adjustsImageWhenDisabled = style.adjustsImageWhenDisabled { self.adjustsImageWhenDisabled = adjustsImageWhenDisabled}
-        if let showsTouchWhenHighlighted = style.showsTouchWhenHighlighted { self.showsTouchWhenHighlighted = showsTouchWhenHighlighted}
+        style.reversesTitleShadowWhenHighlighted.whenNotNil { self.reversesTitleShadowWhenHighlighted = $0}
+        style.adjustsImageWhenHighlighted.whenNotNil { self.adjustsImageWhenHighlighted = $0}
+        style.adjustsImageWhenDisabled.whenNotNil { self.adjustsImageWhenDisabled = $0}
+        style.showsTouchWhenHighlighted.whenNotNil { self.showsTouchWhenHighlighted = $0}
         style.backgroundImage.forEach { item in setBackgroundImage(item.value, for: item.key) }
         style.image.forEach { item in setImage(item.value, for: item.key) }
-        if let contentEdgeInsets = style.contentEdgeInsets { self.contentEdgeInsets = contentEdgeInsets}
-        if let titleEdgeInsets = style.titleEdgeInsets { self.titleEdgeInsets = titleEdgeInsets}
-        if let imageEdgeInsets = style.imageEdgeInsets { self.imageEdgeInsets = imageEdgeInsets}
+        style.contentEdgeInsets.whenNotNil { self.contentEdgeInsets = $0}
+        style.titleEdgeInsets.whenNotNil { self.titleEdgeInsets = $0}
+        style.imageEdgeInsets.whenNotNil { self.imageEdgeInsets = $0}
     }
 }
