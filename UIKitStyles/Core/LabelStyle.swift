@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LabelStyle: ViewStyle {
+public class LabelStyle: ViewStyle {
     var text: String? = nil
     var attributedText: NSAttributedString? = nil
     var font: UIFont? = nil
@@ -26,7 +26,7 @@ class LabelStyle: ViewStyle {
     var shadowColor: UIColor? = nil
     var shadowOffset: CGSize? = nil
     
-    init(text: String? = nil,
+    public init(text: String? = nil,
         attributedText: NSAttributedString? = nil,
         font: UIFont? = nil,
         textColor: UIColor? = nil,
@@ -63,7 +63,7 @@ class LabelStyle: ViewStyle {
 
 extension UILabel {
     
-    func apply(style: LabelStyle) {
+    public func apply(style: LabelStyle) {
         super.apply(style: style)
         style.attributedText.whenNotNil { self.attributedText = $0}
         style.font.whenNotNil { self.font = $0}

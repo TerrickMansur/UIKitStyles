@@ -17,6 +17,6 @@ Pod::Spec.new do |s|
   # s.license 		= { :type => "MIT", :file => "FILE_LICENSE" }
   	s.author        = { "Terrick Mansur" => "terrickmansur@gmail.com" }
   	s.source 		= { :git => "https://github.com/TerrickMansur/UIKitStyles.git", :tag => "#{s.version}" }
-  	s.source_files = "Arubook/**/*.{h,m,swift}"
+  	s.source_files = "UIKitStyles/**/*.{h,m,swift}"
 
 end

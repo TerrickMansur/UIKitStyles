@@ -8,25 +8,25 @@
 
 import UIKit
 
-class ButtonStyle: ViewStyle {
+public class ButtonStyle: ViewStyle {
 
-    var titleLabel = LabelStyle()
+    public var titleLabel = LabelStyle()
 
-    var title: [UIControl.State: String?]
-    var attributedTitle: [UIControl.State: NSAttributedString?]
-    var titleColor: [UIControl.State: UIColor]
-    var titleShadowColor: [UIControl.State: UIColor]
-    var reversesTitleShadowWhenHighlighted: Bool?
-    var adjustsImageWhenHighlighted: Bool?
-    var adjustsImageWhenDisabled: Bool?
-    var showsTouchWhenHighlighted: Bool?
-    var backgroundImage: [UIControl.State: UIImage]
-    var image: [UIControl.State: UIImage]
-    var contentEdgeInsets: UIEdgeInsets?
-    var titleEdgeInsets: UIEdgeInsets?
-    var imageEdgeInsets: UIEdgeInsets?
+    public var title: [UIControl.State: String?]
+    public var attributedTitle: [UIControl.State: NSAttributedString?]
+    public var titleColor: [UIControl.State: UIColor]
+    public var titleShadowColor: [UIControl.State: UIColor]
+    public var reversesTitleShadowWhenHighlighted: Bool?
+    public var adjustsImageWhenHighlighted: Bool?
+    public var adjustsImageWhenDisabled: Bool?
+    public var showsTouchWhenHighlighted: Bool?
+    public var backgroundImage: [UIControl.State: UIImage]
+    public var image: [UIControl.State: UIImage]
+    public var contentEdgeInsets: UIEdgeInsets?
+    public var titleEdgeInsets: UIEdgeInsets?
+    public var imageEdgeInsets: UIEdgeInsets?
     
-    init(
+    public init(
         title: [UIControl.State: String?] = [:],
         attributedTitle: [UIControl.State: NSAttributedString?] = [:],
         titleColor: [UIControl.State: UIColor] = [:],
@@ -55,11 +55,17 @@ class ButtonStyle: ViewStyle {
         self.imageEdgeInsets = imageEdgeInsets
         super.init()
     }
+    
+    public static func +=(lhs: inout ButtonStyle, rhs: ViewStyle) {
+        var viewStyle = lhs as ViewStyle
+        viewStyle += rhs
+    }
 }
 
 extension UIButton {
-    func apply(style: ButtonStyle) {
-
+    public func apply(style: ButtonStyle) {
+        super.apply(style: style)
+        
         style.title.forEach { item in setTitle(item.value, for: item.key) }
         style.attributedTitle.forEach { item in setAttributedTitle(item.value, for: item.key) }
         style.titleColor.forEach { item in setTitleColor(item.value, for: item.key) }

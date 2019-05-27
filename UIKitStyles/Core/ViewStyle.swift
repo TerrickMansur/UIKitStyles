@@ -8,20 +8,20 @@
 
 import UIKit
 
-class ViewStyle {
+public class ViewStyle {
 
-    var backgroundColor: UIColor? = nil
-    var isHidden: Bool? = nil
-    var alpha: CGFloat? = nil
-    var isOpaque: Bool? = nil
-    var tintColor: UIColor? = nil
-    var tintAdjustmentMode: UIView.TintAdjustmentMode? = nil
-    var clipsToBounds: Bool? = nil
-    var clearsContextBeforeDrawing: Bool? = nil
-    var mask: UIView? = nil
-    var layer: LayerStyle = LayerStyle()
+    public var backgroundColor: UIColor? = nil
+    public var isHidden: Bool? = nil
+    public var alpha: CGFloat? = nil
+    public var isOpaque: Bool? = nil
+    public var tintColor: UIColor? = nil
+    public var tintAdjustmentMode: UIView.TintAdjustmentMode? = nil
+    public var clipsToBounds: Bool? = nil
+    public var clearsContextBeforeDrawing: Bool? = nil
+    public var mask: UIView? = nil
+    public var layer: LayerStyle = LayerStyle()
     
-    init(
+    public init(
         backgroundColor: UIColor? = nil,
         isHidden: Bool? = nil,
         alpha: CGFloat? = nil,
@@ -41,12 +41,25 @@ class ViewStyle {
         self.clearsContextBeforeDrawing = clearsContextBeforeDrawing
         self.mask = mask
     }
+    
+    public static func +=(lhs: inout ViewStyle, rhs: ViewStyle) {
+        lhs.backgroundColor = rhs.backgroundColor
+        lhs.isHidden = rhs.isHidden
+        lhs.alpha = rhs.alpha
+        lhs.isOpaque = rhs.isOpaque
+        lhs.tintColor = rhs.tintColor
+        lhs.tintAdjustmentMode = rhs.tintAdjustmentMode
+        lhs.clipsToBounds = rhs.clipsToBounds
+        lhs.clearsContextBeforeDrawing = rhs.clearsContextBeforeDrawing
+        lhs.mask = rhs.mask
+        lhs.layer = rhs.layer
+    }
 }
 
 
 extension UIView {
     
-    func apply(style: ViewStyle) {
+    public func apply(style: ViewStyle) {
         self.layer.apply(style: style.layer)
         style.backgroundColor.whenNotNil { self.backgroundColor = $0 }
         style.isHidden.whenNotNil { self.isHidden = $0 }

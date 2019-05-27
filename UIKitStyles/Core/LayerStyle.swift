@@ -30,7 +30,7 @@ public class LayerStyle {
     public var allowsEdgeAntialiasing: Bool?
     public var allowsGroupOpacity: Bool?
 
-    init(contentsGravity: CALayerContentsGravity? = nil,
+    public init(contentsGravity: CALayerContentsGravity? = nil,
          opacity: Float? = nil,
          isHidden: Bool? = nil,
          masksToBounds: Bool? = nil,
@@ -80,7 +80,7 @@ extension CALayer {
         style.mask.whenNotNil { self.mask = $0 }
         style.isDoubleSided.whenNotNil { self.isDoubleSided = $0 }
         style.cornerRadius.whenNotNil { self.cornerRadius = $0 }
-        style.maskedCorners.whenNotNil { self.maskedCorners = $0 }
+//        style.maskedCorners.whenNotNil { self.maskedCorners = $0 }
         style.borderWidth.whenNotNil { self.borderWidth = $0 }
         style.borderColor.whenNotNil { self.borderColor = $0 }
         style.backgroundColor.whenNotNil { self.backgroundColor = $0 }
