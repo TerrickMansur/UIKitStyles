@@ -16,6 +16,7 @@
 		CB6C837B2297B5F200A81542 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6C837A2297B5F200A81542 /* ButtonStyle.swift */; };
 		CB6C837D2297C21700A81542 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6C837C2297C21700A81542 /* Utilities.swift */; };
 		CB6C837F2299443A00A81542 /* ViewControllerStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6C837E2299443A00A81542 /* ViewControllerStyle.swift */; };
+		CB6C83A5229DCF0200A81542 /* ProgressViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6C83A4229DCF0200A81542 /* ProgressViewStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,7 @@
 		CB6C837A2297B5F200A81542 /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
 		CB6C837C2297C21700A81542 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		CB6C837E2299443A00A81542 /* ViewControllerStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerStyle.swift; sourceTree = "<group>"; };
+		CB6C83A4229DCF0200A81542 /* ProgressViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				CB6C837822979F5500A81542 /* LabelStyle.swift */,
 				CB6C837A2297B5F200A81542 /* ButtonStyle.swift */,
 				CB6C837E2299443A00A81542 /* ViewControllerStyle.swift */,
+				CB6C83A4229DCF0200A81542 /* ProgressViewStyle.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 			files = (
 				CB6C8377229519C700A81542 /* ViewStyle.swift in Sources */,
 				CB6C837B2297B5F200A81542 /* ButtonStyle.swift in Sources */,
+				CB6C83A5229DCF0200A81542 /* ProgressViewStyle.swift in Sources */,
 				CB6C837922979F5500A81542 /* LabelStyle.swift in Sources */,
 				CB6C837D2297C21700A81542 /* Utilities.swift in Sources */,
 				CB6C837F2299443A00A81542 /* ViewControllerStyle.swift in Sources */,
