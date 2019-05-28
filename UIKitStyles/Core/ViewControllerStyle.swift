@@ -9,7 +9,17 @@
 import UIKit
 
 public class ViewControllerStyle {
-   var viewStyle = ViewStyle()
+    public var preferredStatusBarStyle: UIStatusBarStyle
+    public var prefersStatusBarHidden: Bool
+    public var viewStyle = ViewStyle()
+
+    public init(preferredStatusBarStyle: UIStatusBarStyle = .default,
+                prefersStatusBarHidden: Bool = false,
+                viewStyle: ViewStyle = ViewStyle()) {
+        self.preferredStatusBarStyle = preferredStatusBarStyle
+        self.prefersStatusBarHidden = prefersStatusBarHidden
+        self.viewStyle = viewStyle
+    }
 }
 
 extension UIViewController {
