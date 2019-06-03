@@ -24,7 +24,7 @@ Example:
     
     extension Label {
     
-       open func apply(style: UILabelStyle) {
+       open func apply(style: LabelStyle) {
             super.apply(style: style)
             
             style.textColor.whenNotNil { textColor = $0 }
